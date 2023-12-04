@@ -21,7 +21,7 @@ header{
 
 li{
     display: inline-block;
-    margin: 20px;
+    margin: 2px;
 }
 
 a{
@@ -33,6 +33,7 @@ a:hover{
     color: #adff2f;
     transition: 0.3s all;
 }
+
 
 #Login{
     border: 2px solid rgb(83, 201, 14);
@@ -60,8 +61,32 @@ a:hover{
     margin: 15px;
 }
 
+#editarfoto{
+    width: 50%;
+    height: 50%;
+
+}
+
+.profile{
+    margin-right: 60%;
+}
+
+.Perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    
+}
+
 h1{
-    font-weight: 200;
+    font-weight: 900;
+    color: #adff2f;
+}
+
+h4{
+    font-weight: 600;
 }
 
 main{
@@ -74,6 +99,7 @@ h2{
     font-size: 56px;
     line-height: 10px;
     font-family: poppinsmedium;
+    color: #adff2f;
 }
 
 span{
@@ -89,17 +115,17 @@ p{
 img{
     width: 450px;
     margin: 10px;
-    margin-left: 90px;
+    margin-left: 140px;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
 }
 
 form [type="submit"]{
-    height: 50px;
+    height: 60px;
     width: 50%;
     background-color: greenyellow;
     color: white;
@@ -110,6 +136,14 @@ form [type="submit"]:hover{
     cursor: pointer;
 }
 
+.FormCadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column; 
+}
+
+
 input{
     margin-top: 20px;
     height: 20px;
@@ -118,3 +152,31 @@ input{
     border: none;
     font-size: 15px;
 }
+
+.dark-theme {
+    background-color: rgb(68, 51, 99); /* Cor de fundo escura */
+    color: #020101; /* Texto claro */
+    /* Outras definições de estilo para o tema escuro */
+}
+
+/* Estilos para a seção de avaliação */
+ .stars {
+    unicode-bidi: bidi-override;
+    color: #c5c5c5;
+    font-size: 60px; /* Tamanho maior das estrelas */
+    display: inline-block;
+    overflow: hidden;
+    }
+
+.stars-selected {
+    color: #fffb00;
+    position: absolute;
+    margin-top: 28%;
+    }
+
+.profile-view {
+    display: flex;
+    align-items: center;
+    
+        }
+   
