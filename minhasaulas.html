@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Aulas - AgendaEdu</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="shortcut icon" type="imagex/png" href="components/images/icone.ico">
+    </head>
+<body>
+
+    <header> <!-- Título do site e opções de navegação -->
+        <div id="title">
+            <h1>AgendaEdu</h1>
+            <h4>Aulas de Reforço</h4>
+        </div>
+
+        <ul>
+            <a href="pos-login.html"><li>Inicio</li></a>
+            <a href="minhasaulas.html"><li>Minhas aulas</li></a>
+            <a href="agendamentos.html"><li>Meus Horários</li></a>
+            <a href="meuperfil.html"><li>Meu Perfil</li></a>
+            <a href="editarperfil.html"><li>Editar Perfil</li></a>
+            <a href="index.html"><li>Sair</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <section> <!-- Seção de aulas agendadas -->
+            <h2>Minhas Aulas Agendadas</h2>
+            <div class="scheduled-classes">
+                <div class="class-item">
+                    <h3>Aula de Desenvolvimento</h3>
+                    <p>Data: 15 de dezembro de 2023</p>
+                    <p>Horário: 10:00 - 11:30</p>
+                    <p>Local: Escola B - Sala 203</p>
+                    <p>Nome do aluno: Rodolfo tião</p>
+                    <div class="class-actions">
+                        <button onclick="cancelClass(this)">Cancelar Aula</button>
+                        <button onclick="rescheduleClass(this)">Remarcar Aula</button>
+                    </div>
+                </div>
+                
+                <div class="class-item">
+                    <h3>Aula de Banco de Dados</h3>
+                    <p>Data: 18 de dezembro de 2023</p>
+                    <p>Horário: 14:00 - 15:30</p>
+                    <p>Local: Escola A - Sala 305</p>
+                    <p>Nome do aluno: Alberto Sebastião</p>
+                    <div class="class-actions">
+                        <button onclick="cancelClass(this)">Cancelar Aula</button>
+                        <button onclick="rescheduleClass(this)">Remarcar Aula</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        function cancelClass(button) {
+            const classItem = button.closest('.class-item');
+            // Lógica para cancelar a aula
+            alert(`Aula "${classItem.querySelector('h3').innerText}" cancelada com sucesso!`);
+        }
+
+        function rescheduleClass(button) {
+            const classItem = button.closest('.class-item');
+            // Lógica para remarcar a aula
+            alert(`Aula "${classItem.querySelector('h3').innerText}" remarcada com sucesso!`);
+        }
+    </script>
+</body>
+</html>

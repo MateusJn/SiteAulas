@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - AgendaEdu</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="shortcut icon" type="imagex/png" href="components/images/icone.ico">
+</head>
+<body>
+
+    <header> <!-- Título do site e opções de navegação -->
+        <div id="title">
+            <h1>AgendaEdu</h1>
+            <h4>Aulas de Reforço</h4>
+        </div>
+
+        <ul>
+            <a href="pos-login.html"><li>Inicio</li></a>
+            <a href="minhasaulas.html"><li>Minhas aulas</li></a>
+            <a href="agendamentos.html"><li>Meus Horários</li></a>
+            <a href="meuperfil.html"><li>Meu Perfil</li></a>
+            <a href="editarperfil.html"><li>Editar Perfil</li></a>
+            <a href="index.html"><li>Sair</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <section> <!-- Seção do painel -->
+            <h2>Bem-vindo ao Painel do Professor</h2>
+            <div id="user-greeting"></div> <!-- Aqui será exibido o cumprimento -->
+
+            <!-- Botão para alternar entre os temas -->
+            <button onclick="toggleTheme()">Alternar Tema</button><br>
+
+            <!-- Exibição do número de aulas agendadas -->
+            <div id="lesson-info">
+                <h3>Aulas agendadas: <span id="scheduled-lessons">5</span></h3>
+                <h3>Aulas finalizadas: <span id="taught-lessons">20</span></h3>
+
+                <h3><a href="minhasaulas.html">Ver Minhas Aulas</a></h3>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        //Função para aparecer o nome do usuario apos o login
+        function showUserName(userName) {
+        const userGreeting = document.getElementById('user-greeting');
+        userGreeting.textContent = `Olá, ${userName}! Bem-vindo ao Painel.`; }
+
+        const usuarioLogado = "Jose Paulo";
+    showUserName(usuarioLogado);
+
+     // Função para atualizar o número de aulas agendadas e ministradas
+     function updateLessonInfo(scheduled, taught) {
+            const scheduledLessons = document.getElementById('scheduled-lessons');
+            const taughtLessons = document.getElementById('taught-lessons');
+
+            scheduledLessons.textContent = scheduled;
+            taughtLessons.textContent = taught;
+        }
+
+        
+        const aulasAgendadas = 8; 
+        const aulasMinistradas = 30; 
+
+        // Função para trocar entre os temas claro e escuro
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-theme'); 
+          }
+    </script>
+</body>
+</html>

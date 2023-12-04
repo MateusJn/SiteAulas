@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - AgendaEdu</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="shortcut icon" type="imagex/png" href="components/images/icone.ico">
+</head>
+<body>
+
+    <header> <!-- Título do site e opções de navegação -->
+        <div id="title">
+            <h1>AgendaEdu</h1>
+            <h4>Aulas de Reforço</h4>
+        </div>
+
+        <ul>
+            <a href="pos-login.html"><li>Inicio</li></a>
+            <a href="minhasaulas.html"><li>Minhas aulas</li></a>
+            <a href="agendamentos.html"><li>Meus Horários</li></a>
+            <a href="meuperfil.html"><li>Perfil</li></a>
+            <a href="editarperfil.html"><li>Editar Perfil</li></a>
+            <a href="index.html"><li>Sair</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <section> <!-- Seção de perfil do professor -->
+            <h2>Editar meu Perfil</h2>
+            <div class="profile">
+                <div class="profile-info">
+                    
+                    <label for="photo">Alterar Foto</label>
+                    <img src="components/images/imagemprofessor.jpg" alt="Foto do Perfil" id="editarfoto">
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                    
+                    <form>
+                        <label for="area">Área de Atuação:</label>
+                        <input type="text" id="area" name="area" value="Matemática">
+                        
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" value="35">
+                        
+                        <label for="genero">Gênero:</label>
+                        <select id="genero" name="genero">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        
+                        <input type="submit" value="Salvar Alterações">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

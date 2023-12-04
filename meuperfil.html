@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - AgendaEdu</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="shortcut icon" type="imagex/png" href="components/images/icone.ico">
+</head>
+<body>
+
+    <header> <!-- Título do site e opções de navegação -->
+        <div id="title">
+            <h1>AgendaEdu</h1>
+            <h4>Aulas de Reforço</h4>
+        </div>
+
+        <ul>
+            <a href="pos-login.html"><li>Inicio</li></a>
+            <a href="minhasaulas.html"><li>Minhas aulas</li></a>
+            <a href="agendamentos.html"><li>Meus Horários</li></a>
+            <a href="meuperfil.html"><li>Perfil</li></a>
+            <a href="editarperfil.html"><li>Editar Perfil</li></a>
+            <a href="index.html"><li>Sair</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <section class="Perfil"> <!-- Seção de visualização do perfil -->
+            <h2>Meu Perfil</h2>
+            <div class="profile-view">
+                <img src="components/images/imagemprofessor.jpg" alt="Foto do Perfil" style="width: 150px; height: auto;"> <!-- Ajuste o tamanho conforme necessário -->
+                <div>
+                    <h3>Professor: José Paulo</h3>
+                    <p>Idade: 35 anos</p>
+                    <p>Área de Atuação: Tecnologia</p>
+                </div>
+            </div>
+
+            <div class="stars" onclick="rateTeacher(event)">
+                &#9733;&#xfe0e;
+                &#9733;&#xfe0e;
+                &#9733;&#xfe0e;
+                &#9733;&#xfe0e;
+                &#9733;&#xfe0e;
+            </div>
+            <p><span id="ratingText">5</span> estrelas</p>
+        </section>
+    </main>
+    
+    <script>
+        // Função para avaliação do professor em estrelas
+        function rateTeacher(event) {
+            const stars = document.querySelectorAll('.stars');
+            const clickedStar = event.target;
+            const clickedStarIndex = Array.from(clickedStar.parentElement.children).indexOf(clickedStar);
+            
+            for (let i = 0; i < stars.length; i++) {
+                if (i <= clickedStarIndex) {
+                    stars[i].classList.add('stars-selected');
+                } else {
+                    stars[i].classList.remove('stars-selected');
+                }
+            }
+
+            const rating = clickedStarIndex + 1;
+            document.getElementById('ratingText').textContent = rating;
+            console.log(`Avaliação: ${rating} estrela(s)`);
+        }
+    </script>
+</body>
+</html>

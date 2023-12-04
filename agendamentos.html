@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários Disponíveis - PROJETO</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="shortcut icon" type="imagex/png" href="components/images/icone.ico">
+</head>
+<body>
+
+    <header> <!-- Título do site e opções de navegação -->
+        <div id="title">
+            <h1>AgendaEdu</h1>
+            <h4>Aulas de Reforço</h4>
+        </div>
+
+        <ul>
+            <a href="pos-login.html"><li>Inicio</li></a>
+            <a href="minhasaulas.html"><li>Minhas aulas</li></a>
+            <a href="agendamentos.html"><li>Meus Horários</li></a>
+            <a href="meuperfil.html"><li>Perfil</li></a>
+            <a href="editarperfil.html"><li>Editar Perfil</li></a>
+            <a href="index.html"><li>Sair</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <section> <!-- Seção de formulário de horários disponíveis -->
+            <h2>Horários Disponíveis</h2>
+            <form>
+                <label for="dia">Dia da Semana:</label>
+                <select id="dia" name="dia" required>
+                    <option value="" disabled selected>Selecione o dia</option>
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                    <option value="sexta">Sabado</option>
+                    <option value="sexta">Domingo</option>
+                </select>
+                
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario" required>
+                
+                <label for="disponibilidade">Disponibilidade:</label>
+                <select id="disponibilidade" name="disponibilidade" required>
+                    <option value="" disabled selected>Selecione a disponibilidade</option>
+                    <option value="disponivel">Disponível</option>
+                    <option value="indisponivel">Indisponível</option>
+                </select>
+                
+                <input type="submit" value="Salvar">
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>

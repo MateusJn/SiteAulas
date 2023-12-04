@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/media.css">
+    <title>AgendaEdu - Aulas de Reforço</title>
     <link rel="shortcut icon" type="imagex/png" href="components/images/icone.ico">
-    <title>Login - AgendaEdu</title>
 </head>
 <body>
 
@@ -26,30 +26,35 @@
         </ul>
     </header>
 
-    <main>
+    <main class="FormCadastro">
         <aside>
-            <h2><span>Faça seu login</span></h2>
-            <p>Acesse suas informações sobre as aulas e todo seu perfil</p>
+            <h2><span>Faça seu cadastro</span></h2>
+            <p>Crie sua conta no nosso site e venha fazer parte do melhor time escolar!</p>
+            <div id="formulario">
+            <form action="" method="post">
+                <label for="nome"></label>
+                <input type="text" id="nome" name="nome" required placeholder="Nome completo">
 
-            <form>
-                <input type="email" placeholder="E-mail" required>
-                <input type="password" placeholder="Senha"required>
-                <input type="submit" value="Enviar >"> 
-                <div class="signup-link">
-                    <p> Esqueceu sua senha?<a href="#">Recupere já</a></p>
-                    <p> Ainda não tem cadastro? <a href="cadastro.html">Cadastre-se agora</a></p>
-                </div>
+                <label for="Usuario"></label>
+                <input type="text" id="login" name="login" required placeholder="Usuario">
 
+                <label for="E-mail"></label>
+                <input type="email" id="email" name="email" required placeholder="E-mail">
+
+                <label for="Senha"></label>
+                <input type="password" id="Senha" name="senha" required placeholder="Senha">
+
+
+                <input type="submit" value="Enviar >">
+
+            </div>   
+            </div>
                 
             </form>
         </aside>
 
         
-        <article>
-            <img src="components/images/Logo.png" alt="Logo">
-        </article>
-
-    </main>
+         </main>
     
 </body>
 </html>
